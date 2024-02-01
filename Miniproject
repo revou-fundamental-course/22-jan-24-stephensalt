@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="E-Groceries - Your Online Grocery Store">
+    <title>E-Groceries</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <main>
+        <form id="contact-form">
+            <div class="form-group">
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" required>
+            </div>
+            <div class="form-group">
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+            </div>
+            <div class="form-group">
+                <label for="phone">Phone Number:</label>
+                <input type="tel" id="phone" name="phone" required>
+            </div>
+            <div class="form-group">
+                <label for="message">Message:</label>
+                <textarea id="message" name="message"></textarea>
+            </div>
+            <button type="button" onclick="validateForm()">Submit</button>
+        </form>
+    </main>
+
+    <script src="script.js"></script>
+
+    <script>
+        function validateForm() {
+            var name = document.getElementById("name").value;
+            var email = document.getElementById("email").value;
+            var phone = document.getElementById("phone").value;
+            var message = document.getElementById("message").value;
+
+            if (name === "" || email === "" || phone === "" || message === "") {
+                alert("Please fill in all fields");
+                return false;
+            }
+
+            // Additional validation logic can be added (e.g., email format, phone number format)
+
+            // If all validations pass, you can submit the form or take further actions
+            alert("Form submitted successfully!");
+            // document.getElementById("contact-form").submit(); // Uncomment this line to submit the form
+        }
+    </script>
+</body>
+</html>
