@@ -45,11 +45,10 @@
                 return false;
             }
 
-            // Additional validation logic can be added (e.g., email format, phone number format)
 
-            // If all validations pass, you can submit the form or take further actions
+            
             alert("Form submitted successfully!");
-            // document.getElementById("contact-form").submit(); // Uncomment this line to submit the form
+            document.getElementById("contact-form").submit()
         }
     </script>
 </body>
